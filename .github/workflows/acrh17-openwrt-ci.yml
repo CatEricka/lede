@@ -132,7 +132,8 @@ jobs:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-qbittorrent=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          luci-app-unblockmusic
+          CONFIG_PACKAGE_luci-app-unblockmusic=y
+          CONFIG_PACKAGE_luci-app-flowoffload=y
           # CONFIG_PACKAGE_luci-app-adbyby-plus is not set
           # CONFIG_PACKAGE_luci-app-wol is not set
           # CONFIG_PACKAGE_luci-app-vsftpd is not set
@@ -146,15 +147,9 @@ jobs:
           # EOF
 
           # 常用软件包:
-          # cat >> .config <<EOF
-          # CONFIG_PACKAGE_curl=y
-          # CONFIG_PACKAGE_htop=y
-          # CONFIG_PACKAGE_nano=y
-          # CONFIG_PACKAGE_screen=y
-          # CONFIG_PACKAGE_tree=y
-          # CONFIG_PACKAGE_vim-fuller=y
-          # CONFIG_PACKAGE_wget=y
-          # EOF
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_htop=y
+          EOF
 
           # 
           # ========================固件定制部分结束========================
